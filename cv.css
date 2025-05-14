@@ -134,12 +134,55 @@ section {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
-#perfil, #experiencia, #educacion, #habilidades, #idiomas {
-    background-color: var(--background-color);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    z-index: 0;
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+#perfil {
+    background-image: url('img/profile-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#experiencia {
+    background-image: url('img/experience-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#educacion {
+    background-image: url('img/education-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#habilidades {
+    background-image: url('img/skills-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#idiomas {
+    background-image: url('img/languages-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 h2 {
