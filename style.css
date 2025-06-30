@@ -44,6 +44,11 @@ html {
   .ima {
     width: 100px;
   }
+
+  .links .icon p {
+    font-size: 0.4em;
+  }
+  
   /* .hackmd {
     width: 70px;
   }
